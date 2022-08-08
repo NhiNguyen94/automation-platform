@@ -1,0 +1,108 @@
+<testsuite name="test.api_sample_test.API Test Features" tests="1" errors="0" failures="1" skipped="0" time="0.0" timestamp="2022-07-18T22:04:17.851399" hostname="MacBook-Pro"><testcase classname="test.api_sample_test.API Test Features" name="Able to call Connect APIs successfully (uid:test)" status="failed" time="0"><failure type="NoneType" message="None">
+<![CDATA[
+Failing step: Given call Login API with partner username as "test_partner" and password as "@Mylove123456" ... undefined in 0.000s
+Location: features/test/api_sample_test.feature:5
+None]]>
+</failure><system-out>
+<![CDATA[
+@scenario.begin
+
+  @test5
+  Scenario: Able to call Connect APIs successfully (uid:test)
+    Given call Login API with partner username as "test_partner" and password as "@Mylove123456" ... undefined in 0.000s
+    When call List Occupation API to get list of all occupations ... undefined in 0.000s
+    Then the response status code will be "200" ... undefined in 0.000s
+    And the response data will be ... undefined in 0.000s
+      """
+      [
+       {
+          "code": "001",
+          "name" : "Agriculture"
+       },
+       {
+          "code": "002",
+          "name": "Doctor"
+       },
+       {
+          "code": "003",
+          "name": "Freelance profession"
+       },
+       {
+          "code": "004",
+          "name": "Government officer"
+       },
+       {
+          "code": "005",
+          "name": "Housewife"
+       },
+       {
+          "code":"006",
+          "name":"Lawyer"
+       },
+       {
+          "code":"007",
+          "name":"Nurse"
+       },
+       {
+          "code":"008",
+          "name":"Office worker"
+       },
+       {
+          "code":"009",
+          "name":"Officer"
+       },
+       {
+          "code":"010",
+          "name":"Other"
+       },
+       {
+          "code":"011",
+          "name":"Public employee"
+       },
+       {
+          "code":"012",
+          "name":"Retirement"
+       },
+       {
+          "code":"013",
+          "name":"Self-employed"
+       },
+       {
+          "code":"014",
+          "name":"Student"
+       },
+       {
+          "code":"015",
+          "name":"Teacher"
+       },
+       {
+          "code":"016",
+          "name":"Unemployed"
+       },
+       {
+          "code":"017",
+          "name":"Hospitality worker"
+       },
+       {
+          "code":"018",
+          "name":"Security services"
+       },
+       {
+          "code":"019",
+          "name":"Domestic worker"
+       },
+       {
+          "code":"020",
+          "name":"Retail worker"
+       },
+       {
+          "code":"021",
+          "name":"Labourer"
+       }
+      ]
+      """
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

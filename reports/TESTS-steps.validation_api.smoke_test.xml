@@ -1,0 +1,87 @@
+<testsuite name="steps.validation_api.smoke_test.Smoke tests for Validation APIs" tests="2" errors="0" failures="2" skipped="0" time="1.428059" timestamp="2022-07-18T23:13:47.323594" hostname="MacBook-Pro"><testcase classname="steps.validation_api.smoke_test.Smoke tests for Validation APIs" name="Able to search validation schema rule with no payload field with - B2B -- @1.1 " status="failed" time="0.657191"><failure type="NoneType" message="None">
+<![CDATA[
+Failing step: When call Search Schema API to search schema "create_transfer" with following payload ... undefined in 0.000s
+  """
+  {
+    "partner": "B2B_Partner"
+  }
+  """
+Location: features/steps/validation_api/smoke_test.feature:6
+None]]>
+</failure><system-out>
+<![CDATA[
+@scenario.begin
+
+  @validation_api @smoke @search
+  Scenario Outline: Able to search validation schema rule with no payload field with - B2B -- @1.1 
+    Given call Login API with partner username as "B2B_Partner" and password as "B2B_Partner_P4ssw0rd" ... passed in 0.657s
+    When call Search Schema API to search schema "create_transfer" with following payload ... undefined in 0.000s
+      """
+      {
+        "partner": "B2B_Partner"
+      }
+      """
+    Then the response status code will be "200" ... skipped in 0.000s
+    And the response data will be ... skipped in 0.000s
+      """
+      {
+        "detail": [
+            {
+                "loc": [
+                    "body",
+                    "payload"
+                ],
+                "msg": "field required",
+                "type": "value_error.missing"
+            }
+        ]
+      }
+      """
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="steps.validation_api.smoke_test.Smoke tests for Validation APIs" name="Able to search validation schema rule with no payload field with - C2C -- @1.2 " status="failed" time="0.770868"><failure type="NoneType" message="None">
+<![CDATA[
+Failing step: When call Search Schema API to search schema "create_transfer" with following payload ... undefined in 0.000s
+  """
+  {
+    "partner": "C2C_Partner"
+  }
+  """
+Location: features/steps/validation_api/smoke_test.feature:6
+None]]>
+</failure><system-out>
+<![CDATA[
+@scenario.begin
+
+  @validation_api @smoke @search
+  Scenario Outline: Able to search validation schema rule with no payload field with - C2C -- @1.2 
+    Given call Login API with partner username as "C2C_Partner" and password as "C2C_Partner_P4ssw0rd" ... passed in 0.771s
+    When call Search Schema API to search schema "create_transfer" with following payload ... undefined in 0.000s
+      """
+      {
+        "partner": "C2C_Partner"
+      }
+      """
+    Then the response status code will be "200" ... skipped in 0.000s
+    And the response data will be ... skipped in 0.000s
+      """
+      {
+        "detail": [
+            {
+                "loc": [
+                    "body",
+                    "payload"
+                ],
+                "msg": "field required",
+                "type": "value_error.missing"
+            }
+        ]
+      }
+      """
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

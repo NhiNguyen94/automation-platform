@@ -1,0 +1,59 @@
+<testsuite name="validation_api.validation_schema_api.smoke_validation_schema.Smoke tests for Validation Schema APIs" tests="1" errors="0" failures="0" skipped="0" time="0.795471" timestamp="2022-07-20T15:05:02.944389" hostname="MacBook-Pro"><testcase classname="validation_api.validation_schema_api.smoke_validation_schema.Smoke tests for Validation Schema APIs" name="Able to validate schema of general B2B create transfer payload with only required fields in Indonesia instance" status="passed" time="0.795471"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @validation_api @smoke @validate @test
+  Scenario: Able to validate schema of general B2B create transfer payload with only required fields in Indonesia instance
+    Given call Login API with partner username as "B2B_Partner" and password as "B2B_Partner_P4ssw0rd" ... passed in 0.397s
+    When call Validate Schema API to validate schema "create_transfer" with following payload ... passed in 0.398s
+      """
+      {
+        "partner": "B2B_Partner",
+        "payload":{
+                  "destination_amount":{
+                                      "currency": "IDR",
+                                      "units": "10.0"
+                  },
+                  "source":{
+                            "type": "partner",
+                            "country": "PHL",
+                            "segment": "business",
+                            "sender_id": "123456",
+                            "company_name": "test source company",
+                            "company_trading_name": "test source company trading name",
+                            "mobile_number": "+85212345678",
+                            "company_registration_country": "PHL",
+                            "address_line": "test address line",
+                            "address_city": "test address city",
+                            "address_country": "PHL"
+                  },
+                  "destination":{
+                                 "type": "bank_account",
+                                 "country": "IDN",
+                                 "segment": "business",
+                                 "company_name": "test destination company",
+                                 "company_registration_number": "11223344",
+                                 "company_registration_country": "PHL",
+                                 "bank": "002",
+                                 "account_number": "12345678"
+                  },
+                  "compliance":{
+                                "source_of_funds": "06",
+                                "remittance_purpose": "007-01"
+                  }
+        }
+      }
+      """
+    Then the response status code will be "200" ... passed in 0.000s
+    And the response data will be ... passed in 0.000s
+      """
+      {
+          "valid": true,
+          "details": {}
+      }
+      """
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

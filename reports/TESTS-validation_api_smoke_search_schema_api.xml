@@ -1,0 +1,9 @@
+<testsuite name="validation_api_smoke_search_schema_api.# Enter feature name here" tests="1" errors="0" failures="0" skipped="1" time="0.0" timestamp="2022-07-13T14:43:55.487925" hostname="MacBook-Pro.local"><testcase classname="validation_api_smoke_search_schema_api.# Enter feature name here" name="# Enter scenario name here" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: # Enter scenario name here
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

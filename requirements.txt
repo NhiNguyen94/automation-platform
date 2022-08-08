@@ -1,0 +1,8 @@
+behave
+behave-webdriver
+selenium
+webdriver-manager
+allure-behave
+allure-python-commons
+Appium-Python-Client
+PyYAML
